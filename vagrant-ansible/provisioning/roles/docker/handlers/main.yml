@@ -1,0 +1,8 @@
+---
+   - name: Add user "demo" to docker group
+     command: usermod -aG docker demo
+  
+   - name: restart docker
+     service:
+       name: docker
+       state: restarted

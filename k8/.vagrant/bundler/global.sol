@@ -1,0 +1,1 @@
+{"dependencies":[["ffi",[">= 1.0.0"]],["win32-process",[">= 0"]],["vagrant-sshfs",["= 1.3.4"]],["log4r",[">= 0"]],["concurrent-ruby",["~> 1.0"]],["i18n",[">= 0"]],["micromachine",[">= 2","< 4"]],["vagrant-vbguest",["= 0.24.0"]]],"checksum":"c6a466f6ff7004fbc2d5797862945e2efeda41e02e2906a6dab31304cc159bd2","vagrant_version":"2.2.9"}

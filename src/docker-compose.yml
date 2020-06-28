@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: zerodha-app:v3
+    environment:
+      - DEMO_APP_ADDR=app:8080
+      - DEMO_REDIS_ADDR=redis:6379
+    ports:
+      - 1234:8080
+    depends_on: [redis]
+
+  redis:
+    image: redis:latest
+    volumes: [$PWD/redis-data:/data]

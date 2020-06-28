@@ -1,0 +1,16 @@
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  config.vm.define "docker" do |docker|
+    config.vm.box = "hashicorp/bionic64"
+    config.vm.network "forwarded_port", guest: 1234, host: 8080
+  config.vm.define "kubernetes" do |kubernetes|
+    config.vm.box = "mrvantage/centos7-minikube"
+  end
+      config.vm.provision "ansible" do |ansible|
+        ansible.playbook = "provisioning/playbook.yml"
+        ansible.inventory_path = ".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory"
+end
+end
