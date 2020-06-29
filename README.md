@@ -10,7 +10,15 @@ Choose the underlying infra, docker-compose [1] or Kubernetes [2] for executing 
 
 ## Code flow 
 
-![Alt text](./ops-task-code-flow-v3.jpg "Code Flow")
+![Alt text](./images/code-flow.jpg "Code Flow")
+
+## Screenshots: 
+### - Docker-compose
+![Alt text](./images/docker.png "Code Flow")
+
+### - Kubernetes
+![Alt text](./images/k8s.png "Code Flow")
+
 
 ## Directory structure
 ```
