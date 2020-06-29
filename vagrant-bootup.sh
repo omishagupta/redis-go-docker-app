@@ -23,10 +23,12 @@ fi
 
 echo "-------------------------- Dependencies Resolved ----------------------------"
 
-echo "Which underneath service would you want to run the app on (choose the corresponding number): \n [1] Docker \n [2] Kubernetes "
+echo "Which underneath service would you want to run the app on (choose the corresponding number):"
+echo "[1] docker-compose"
+echo "[2] Kubernetes"
 read choice
 if [[ $choice == 1 ]]; then
-    SERVICE=docker
+    SERVICE=compose
 else
     SERVICE=kubernetes
 fi

@@ -12,7 +12,7 @@
       # service: "Docker"
     roles:
     - common
-    - { role: docker, when: service == "docker" } 
-    - { role: app, when: service == "docker" }
+    - { role: docker, when: service == "compose" } 
+    - { role: app, when: service == "compose" }
     - { role: kubernetes, when: service == "kubernetes" }
  

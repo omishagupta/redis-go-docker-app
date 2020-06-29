@@ -1,1 +1,1 @@
-{"name":"hashicorp/bionic64","version":"1.0.282","provider":"virtualbox","directory":"boxes/hashicorp-VAGRANTSLASH-bionic64/1.0.282/virtualbox"}
+{"name":"mrvantage/centos7-minikube","version":"1.0.5-20200121","provider":"virtualbox","directory":"boxes/mrvantage-VAGRANTSLASH-centos7-minikube/1.0.5-20200121/virtualbox"}
