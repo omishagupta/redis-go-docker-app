@@ -11,7 +11,7 @@
       service: "{{ lookup('env', 'SERVICE') }}"
       # service: "Docker"
     roles:
-    - common
+    # - common
     - { role: docker, when: service == "compose" } 
     - { role: app, when: service == "compose" }
     - { role: kubernetes, when: service == "kubernetes" }

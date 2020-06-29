@@ -27,11 +27,13 @@ echo "Which underneath service would you want to run the app on (choose the corr
 echo "[1] docker-compose"
 echo "[2] Kubernetes"
 read choice
+
 if [[ $choice == 1 ]]; then
     SERVICE=compose
 else
     SERVICE=kubernetes
 fi
-# env SERVICE=DOCKER
-echo "Bringing up vagrant cluster with $SERVICE ( This will take around 10 mins) "
-SERVICE=kubernetes vagrant up
+
+echo "Bringing up vagrant cluster with $SERVICE (This will take a few moments)"
+
+SERVICE=$SERVICE vagrant up

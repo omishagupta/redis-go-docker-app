@@ -23,6 +23,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "ansible/playbook.yml"
     ansible.inventory_path = ".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory"
+    ansible.verbose = "true"
     ansible.extra_vars = {
       SERVICE: ENV["SERVICE"]
     }
