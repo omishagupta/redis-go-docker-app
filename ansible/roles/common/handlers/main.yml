@@ -1,6 +1,6 @@
 ---
 
-    - name: Reboot host and wait for it to restart to reflect the hostname changes.
-      become: true
-      reboot:
-            msg: "Reboot initiated by Ansible"
+- name: Reboot host and wait for it to restart to reflect the hostname changes.
+  become: true
+  reboot:
+    msg: "Reboot initiated by Ansible"

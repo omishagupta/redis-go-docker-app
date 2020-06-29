@@ -40,8 +40,7 @@ spec:
             value: 0.0.0.0:8080
           - name: DEMO_REDIS_ADDR
             value: redis:6379   
-            
-            
+                 
 ---
 
 apiVersion: v1

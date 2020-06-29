@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-
+# Checking dependencies
 echo "---------------------------- Checking dependencies -----------------------------"
 if [ -x "$(command -v vagrant)" ]; then
     echo "Vagrant version: " `vagrant --version`
@@ -36,4 +36,6 @@ fi
 
 echo "Bringing up vagrant cluster with $SERVICE (This will take a few moments)"
 
+# Removing vagrant VM, if running already
+vagrant destroy 
 SERVICE=$SERVICE vagrant up

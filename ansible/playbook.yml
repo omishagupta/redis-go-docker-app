@@ -1,18 +1,17 @@
 ---
-  - hosts: all
-    become: yes
-    become_user: root
-    vars:
-      hostname: "demo-ops"
-      username: "demo"
-      workdir: "~/Downloads/ops-interview-task-master/"
-      timezone: "Asia/Kolkata"
-      currentUser: "vagrant"
-      service: "{{ lookup('env', 'SERVICE') }}"
-      # service: "Docker"
-    roles:
-    # - common
+- hosts: all
+  become: yes
+  become_user: root
+  vars:
+    hostname: "demo-ops"
+    username: "demo"
+    workdir: "../" 
+    timezone: "Asia/Kolkata"
+    currentUser: "vagrant"
+    service: "{{ lookup('env', 'SERVICE') }}"
+  roles:
+    - { role: common, when: service == "compose" }  # Cleanup after moving vm.box to minikube-ubuntu
     - { role: docker, when: service == "compose" } 
     - { role: app, when: service == "compose" }
-    - { role: kubernetes, when: service == "kubernetes" }
+    - { role: kubernetes, when: service == "kubernetes" } 
  

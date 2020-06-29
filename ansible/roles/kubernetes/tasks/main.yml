@@ -9,5 +9,3 @@
     - kubectl apply -f namespace.yml
     - kubectl apply -f redis.yml
     - kubectl apply -f app.yml
-
-

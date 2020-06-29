@@ -1,6 +1,6 @@
 # ops-task
 
-To execute the setup, follow `vagrant_boot.sh`
+To execute the setup, run `./vagrant_boot.sh`
 Choose the underlying infra, docker-compose [1] or Kubernetes [2] for executing the code.
 
 
