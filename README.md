@@ -3,14 +3,17 @@
 To execute the setup, run `./vagrant_boot.sh`
 Choose the underlying infra, docker-compose [1] or Kubernetes [2] for executing the code.
 
+## Requirements
+
+- Vagrant
+- Ansible
 
 ## Code flow 
 
-![Alt text](./ops-task-code-flow-v1.jpg "Code Flow")
+![Alt text](./ops-task-code-flow-v3.jpg "Code Flow")
 
 ## Directory structure
 ```
-├── README.md
 ├── Vagrantfile
 ├── ansible
 │   ├── playbook.yml
@@ -35,7 +38,6 @@ Choose the underlying infra, docker-compose [1] or Kubernetes [2] for executing 
 │   ├── app.yml
 │   ├── namespace.yml
 │   └── redis.yml
-├── ops-task-code-flow-v1.jpg
 ├── src
 │   ├── Dockerfile
 │   ├── Makefile
