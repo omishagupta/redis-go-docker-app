@@ -1,0 +1,16 @@
+---
+- name: Copy kubernetes resources
+  copy:
+    src: "{{ workdir }}/kubernetes/"
+    dest: /etc/demo-ops/
+    owner: demo
+    mode: '0644'
+
+- name: run demo-app
+  command:
+    chdir: /etc/demo-ops/
+    cmd: 
+      args:
+        - kubectl apply -f namespace.yml
+        - kubectl apply -f redis.yml
+        - kubectl apply -f app.yml

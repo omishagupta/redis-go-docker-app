@@ -30,13 +30,7 @@ if [[ $choice == 1 ]]; then
 else
     service=Kubernetes
 fi
-
-export -n service
+env service=$service
 echo "Bringing up vagrant cluster with $service ( This will take around 10 mins) "
 cd vagrant-ansible
-
-if [[ $service == "Docker" ]]; then
-    vagrant up docker
-else 
-    vagrant up kubernetes
-fi
+vagrant up

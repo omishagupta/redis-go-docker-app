@@ -1,0 +1,18 @@
+---
+  - hosts: all
+    become: yes
+    become_user: root
+    vars:
+      hostname: "demo-ops"
+      username: "demo"
+      workdir: "~/Downloads/ops-interview-task-master/"
+      timezone: "Asia/Kolkata"
+      currentUser: "vagrant"
+      # service: "{{ lookup('env','service') }}"
+      service: "Docker"
+    roles:
+    # - common
+    # - { role: docker, when: service == "Docker" } 
+    - { role: app, when: service == "Docker" }
+    - { role: kubernetes, when: service == "kubernetes" }
+ 

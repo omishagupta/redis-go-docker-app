@@ -1,0 +1,8 @@
+---
+    # - name: create dir
+    #   command: mkdir /etc/demo-ops
+
+    - name: run demo-app
+      command:
+          chdir: /etc/demo-ops/
+          cmd: docker-compose up -d

@@ -1,0 +1,8 @@
+---
+   - name: Add user "{{ username }}" to docker group
+     command: usermod -aG docker "{{ username }}"
+  
+   - name: restart docker
+     service:
+       name: docker
+       state: restarted
