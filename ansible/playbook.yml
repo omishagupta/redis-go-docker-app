@@ -8,11 +8,11 @@
       workdir: "~/Downloads/ops-interview-task-master/"
       timezone: "Asia/Kolkata"
       currentUser: "vagrant"
-      # service: "{{ lookup('env','service') }}"
-      service: "Docker"
+      service: "{{ lookup('env', 'SERVICE') }}"
+      # service: "Docker"
     roles:
-    # - common
-    # - { role: docker, when: service == "Docker" } 
-    - { role: app, when: service == "Docker" }
+    - common
+    - { role: docker, when: service == "docker" } 
+    - { role: app, when: service == "docker" }
     - { role: kubernetes, when: service == "kubernetes" }
  

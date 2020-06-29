@@ -26,11 +26,10 @@ echo "-------------------------- Dependencies Resolved -------------------------
 echo "Which underneath service would you want to run the app on (choose the corresponding number): \n [1] Docker \n [2] Kubernetes "
 read choice
 if [[ $choice == 1 ]]; then
-    service=Docker
+    SERVICE=docker
 else
-    service=Kubernetes
+    SERVICE=kubernetes
 fi
-env service=$service
-echo "Bringing up vagrant cluster with $service ( This will take around 10 mins) "
-cd vagrant-ansible
-vagrant up
+# env SERVICE=DOCKER
+echo "Bringing up vagrant cluster with $SERVICE ( This will take around 10 mins) "
+SERVICE=kubernetes vagrant up

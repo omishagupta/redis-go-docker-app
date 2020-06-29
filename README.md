@@ -10,7 +10,7 @@ Choose the underlying infra, docker-compose [1] or Kubernetes [2] for executing 
 
 ## Directory structure
 ```
-── README.md
+├── README.md
 ├── Vagrantfile
 ├── ansible
 │   ├── playbook.yml
@@ -46,7 +46,5 @@ Choose the underlying infra, docker-compose [1] or Kubernetes [2] for executing 
 │   ├── main.go
 │   └── redis-data
 │       └── dump.rdb
-├── vagrant-ansible
-│   └── Vagrantfile
 └── vagrant-bootup.sh
 ```

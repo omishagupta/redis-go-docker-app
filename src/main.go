@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/go-chi/chi"
-	"github.com/gomodule/redigo/redis" //not able to reach this
+	"github.com/gomodule/redigo/redis"
 )
 
 var (
@@ -53,7 +53,7 @@ func main() {
 			w.Write([]byte(fmt.Sprintf("oops something went wrong: %v", err)))
 			return
 		}
-		w.Write([]byte(fmt.Sprintf("welcome to api %d", val)))
+		w.Write([]byte(fmt.Sprintf("Tada, your visit is %d", val)))
 	})
 
 	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {

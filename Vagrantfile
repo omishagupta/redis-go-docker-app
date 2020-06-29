@@ -12,11 +12,13 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "alphaegg/minikube-ubuntu16"
+  config.vm.box = "hashicorp/bionic64"
   config.vm.network "forwarded_port", guest: 1234, host: 8080
-  config.vm.provision "file", source: "$PWD/src/", destination: "/etc/demo-ops/"
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "ansible/provisioning/playbook.yml"
+    ansible.playbook = "ansible/playbook.yml"
     ansible.inventory_path = ".vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory"
+    ansible.extra_vars = {
+      SERVICE: ENV["SERVICE"]
+    }
   end
 end
