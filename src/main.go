@@ -60,12 +60,11 @@ func main() {
 		w.Write([]byte(fmt.Sprintf("OK")))
 	})
 
-	addr := os.Getenv("DEMO_APP_ADDR")
-	if addr == "" {
-		addr = ":8080"
-	}
-	log.Printf("Booting app on %s", addr)
-	http.ListenAndServe(addr, r)
+	addr := os.Getenv("DEMO_APP_ADDR") || "";
+	port := os.Getenv("8080") || "8080"
+	host = addr + post;
+	log.Printf("Booting app on %s", host)
+	http.ListenAndServe(host, r)
 }
 
 func incrementKey(c redis.Conn) error {
