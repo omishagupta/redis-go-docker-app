@@ -5,8 +5,8 @@ Choose the underlying infra, docker-compose [1] or Kubernetes [2] for executing 
 
 ## Requirements
 
-- Vagrant
-- Ansible
+- [Vagrant](https://www.vagrantup.com/)
+- [Ansible](https://www.ansible.com/)
 
 ## Code flow 
 
