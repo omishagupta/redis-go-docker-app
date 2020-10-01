@@ -1,5 +1,7 @@
 # ops-task
 
+This is a sample `Go` application which connects to Redis and uses Docker compose or Kubernetes as underlying infrastructure. The app increments a `counter` on an incoming request.
+
 To execute the setup, run `./vagrant_boot.sh`
 Choose the underlying infra, docker-compose [1] or Kubernetes [2] for executing the code.
 
